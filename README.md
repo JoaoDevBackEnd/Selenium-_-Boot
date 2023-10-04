@@ -1,18 +1,16 @@
-## Getting Started
+Esse é um projeto amostra para os primeiros passos Utilizando o Selenium na versão 4.12
+Ainda nesse repósitorio irei publicar a integração do Framework APACHE POI para realizar leitura de planilhas EXCEL, e ainda integrar HIBERNATE para raspagem de dados 
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
 
-## Folder Structure
+***ATENÇÃO Ao clonar o projeto exclua as linha:  
 
-The workspace contains two folders by default, where:
+Thread.sleep(1000);
+            WebElement datenascimento = driver.findElement(By.xpath("//input[@id='dateOfBirthInput']"));
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].value = '';", datenascimento);
+            datenascimento.sendKeys(c.get_nascimento());
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+No arquivo app.java da pasta SRC, essa linha está em desuso e o projeto não foi atualizado até o momento, além de excluir a função mensionada apague na Listaformulario.java   as ultimas atribuição da Array a respeito de "nascimento" que é a data de nascimento , e exclua o método construtor "String nascimento" de Cadastroformulario.java  
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Nas próximas etapas com a integração com o ApachePOI essas linhas estarão corrigidas OBRIGADO ^^ 
